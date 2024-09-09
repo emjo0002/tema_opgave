@@ -1,16 +1,30 @@
 ---
+import { Image } from "astro:assets";
+import { icons } from "astro:assets";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import EmployeeSection from "../components/EmployeeSection.astro";
+
+// import "navn på billedet" from "..assets/images/navn på billedet" //
+
+const employeeData = await fetch (
+"https://raw.githubusercontent.com/emjo0002/frontend-design/main/resources/json/employees.json"
+).then((res) => res.json());
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<!--- <Image alt="" src={} format="avif" /> -->
+
+<BaseLayout title="Home" />
+
+<EmployeeSection data{employeeData} />
+<EmployeeSection data{employeeData} />
+
+</BaseLayout>
+
+<style>
+
+[data-icon=""] {
+
+}
+
+</style>

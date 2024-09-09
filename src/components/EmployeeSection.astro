@@ -1,0 +1,22 @@
+---
+import EmployeeCard from "../components/EmployeeCard.astro"
+
+const { data } = Astro.props
+
+console.log(data);
+---
+
+<section> 
+    {
+        data.map(employee => <EmployeeCard {employee}/>) 
+    }
+<section/>
+
+<style>
+
+@layer components {
+    //* tilføj layer components til alle components *//
+}
+
+
+</style>
