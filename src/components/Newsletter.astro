@@ -1,0 +1,133 @@
+---
+---
+<section>
+    <div>
+        <h4>Subscribe Our Newsletter</h4>
+        <p>Build stronger Customer Relationships with Consultalk</p>
+    </div>
+
+    <form>
+        <input type="email" id="email" name="email" placeholder="Your email address">
+        <button data-surface="none" type="submit">Subscribe</button>
+    </form>
+</section>
+
+<style>
+@layer components {
+
+section {
+    max-width: 108ch;
+    margin-inline: 1rem;
+    padding: 5%;
+    margin-top: 3rem;
+    background-color: var(--black);
+    border-radius: 16px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    
+    @media (width < 800px) {
+        flex-direction: column;
+    }
+    
+
+    @media (width > 800px) { 
+        display: flex;
+        align-items: center; 
+        justify-content: space-between;
+        overflow: hidden;
+        display: flex;
+    }
+      
+    @media (width > 1150px) {
+        padding: 5%;
+        padding-left: 7%;
+        padding-right: 7%;
+        margin-inline: auto;
+    }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    right: -3rem;
+    bottom: -5.6rem;
+    background: var(--green);
+    width: 150px;
+    height: 125px;
+    border-radius: 20px;
+    z-index: 1;
+    transform: rotate(50deg);
+  }
+}
+
+	section:before {
+    --square-count: 20;
+    --square-size: 1.34rem;
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: 1;
+    content: '';
+    position: absolute;
+    inset: -110% -20% auto auto;
+    transform: rotate(40deg);
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+
+
+  }
+
+
+h4, p {
+    color: var(--white);
+}
+
+form {
+    padding-top: 5%;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    gap: 1%;
+
+     @media (width > 800px) {
+        gap: 5%;
+    }
+
+}
+
+input[type="email"] {
+    padding: 1% 2%;
+    border-radius: 30px;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 400px;
+    font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+    outline: none;
+    z-index: 10;
+    position: relative;
+     height: fit-content;
+
+     @media (width > 800px) {
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+}
+
+button {
+    z-index: 10;
+    padding: 1% 2%;
+    border-radius: 30px;
+     height: fit-content;
+
+     @media (width > 800px) {
+        padding: 10px 20px;
+        border-radius: 30px;
+    }
+}
+
+}
+</style>

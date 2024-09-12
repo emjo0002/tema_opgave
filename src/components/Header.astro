@@ -1,0 +1,272 @@
+---
+
+---
+<header>
+    <div class= "header">
+    <div class="logo">
+      <a href="#"><h5>AskExperts</h5></a>
+    </div>
+    <nav>
+      <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Case Study</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#"><button popovertarget="popup" data-surface="none">Login</button><a/></li>
+            <div popover id="popup">
+                <h2>Dashboard Login</h2>
+                <form>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+                     <input type="password" id="password" name="password" placeholder="Enter your password" required />
+                     <button data-surface="none" type="submit">Go to dashboard</button>
+                </form>
+            </div>
+      </ul>
+      <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </nav>
+    <button popovertarget="popup" data-surface="none">Login</button>
+    </div>
+</header>
+
+<style>
+
+@layer components {
+
+    #popup::backdrop {
+    background: rgba(0, 0, 0, 0.5); /* Halvgennemsigtig sort baggrund */
+    backdrop-filter: blur(8px); 
+}
+
+#popup {
+    background-color: var(--black);
+    border-radius: 12px;
+    padding: 4rem;
+    padding-right: 7rem;
+    padding-left: 7rem;
+    text-align: center;
+    
+}
+
+#popup h2 {
+    margin-bottom: 1rem;
+    color: var(--white)
+}
+
+#popup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+#popup input {
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    background-color: white;
+    border-radius: 50px;
+     width: 100%;
+}
+
+#popup button {
+    width: fit-content;
+}
+
+  header {
+    width: 100%;
+    padding: 38px;
+    display: flex;
+  justify-content: center;
+  background-color: rgba(27, 27, 27, 0.91); 
+   
+   h5 {
+    color: #FFF;
+   }
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+  }
+
+  .menu li:not(:has(button)) {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 17.728px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  a {
+    text-decoration: none;
+    color: #FFF;
+  }
+
+  .menu a:hover {
+    text-decoration: underline;
+  }
+
+  .menu {
+    display: flex;
+  justify-content: center; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+
+  }
+
+   .menu li:not(:nth-last-child(2)) {
+  margin-right: 30px;
+}
+
+  .menu li:last-child {
+    margin-right: 0;
+  }
+
+  .menu a {
+    display: block;
+    transition: color 0.3s;
+  }
+
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black);
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  li button {
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .menu {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+
+    li button {
+    display: inline;
+    font-size: 2rem;
+  }
+
+     header button:not(nav button) {
+        display: none;
+    }
+
+    .burger.active .line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+      transition: 0.2s linear;
+    }
+
+    .burger.active .line:nth-child(2) {
+      opacity: 0;
+      transition: 0.15s linear;
+    }
+
+    .menu a:hover {
+      text-decoration: none;
+    }
+
+    .burger.active .line:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+      transition: 0.2s linear;
+    }
+
+    nav.active .menu {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(27, 27, 27, 0.91);;
+    }
+
+    a {
+      margin-left: 5%;
+      align-content: center;
+  text-align: center;
+    }
+
+    nav.active .menu li {
+      margin: 10px 20px;
+    }
+
+    nav.active .menu a {
+      font-size: 2.5rem;
+      color: var(--white);
+      line-height: 75px;
+    }
+
+    .menu {
+      justify-content: center;
+    }
+
+    header {
+      padding: 1rem 3rem 1rem 1rem;
+    }
+
+    .burger .line {
+      width: 100%;
+      height: 2px;
+      background-color: var(--white);
+      margin-bottom: 5px;
+      transition: 0.2s linear;
+    }
+  }
+  }
+</style>
+
+<script>
+  /* Med hjælp fra chatgpt */
+
+  const burger = document.querySelector(".burger");
+  const nav = document.querySelector("nav");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu li a");
+
+  if (burger && nav && menu) {
+    burger.addEventListener("click", () => {
+      console.log("Burger clicked");
+      burger.classList.toggle("active");
+      menu.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        console.log("Link clicked");
+        burger.classList.remove("active");
+        menu.classList.remove("active");
+        nav.classList.remove("active");
+      });
+    });
+  }
+</script>
+

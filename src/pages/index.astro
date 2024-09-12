@@ -1,14 +1,19 @@
 ---
 import { Image } from "astro:assets";
-import { icons } from "astro:assets";
+import { Icon } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EmployeeSection from "../components/EmployeeSection.astro";
+import CoreValues from "../components/CoreValues.astro"
+import Newletter from "../components/Newsletter.astro"
+import Footer from "../components/Footer.astro";
 
 // import "navn på billedet" from "..assets/images/navn på billedet" //
 
-const employeeData = await fetch (
+/* const employeeData = await fetch (
 "https://raw.githubusercontent.com/emjo0002/frontend-design/main/resources/json/employees.json"
-).then((res) => res.json());
+).then((res) => res.json()); 
+
+console.log(employeeData) */
 
 ---
 
@@ -16,15 +21,668 @@ const employeeData = await fetch (
 
 <BaseLayout title="Home" />
 
+<section class="hero">
+	<div class="grid_1-1">
+		<div>
+			<h1>Adam Buschemia Business Consultant</h1>
+			<p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+			<button data-surface="primary">Book a Meeting</button>
+		</div>
+		<img src="../src/assets/images/index.png" alt="" />
+	</div>
+	<div class="cards">
+		<div>
+			<div>
+				<h6>Finance & Restructuring</h6>
+				<p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+			</div>
+			<button data-surface="secondary">Our Services</button>
+		</div>
+		<div>
+			<div>
+				<h6>Our Approach</h6>
+				<p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+			</div>
+			<button data-surface="secondary">More About</button>
+		</div>
+		<div>
+			<div>
+				<h6>Consultalk Result</h6>
+				<p>Get help from Alex Moore, a professional business coach with advanced experience on growth and business scaling.</p>
+			</div>
+			<button data-surface="secondary">Explore Our Solution</button>
+		</div>
+	</div>
+</section>
+<section class="section_2" >
+	<div class="grid_1-1_2">
+		<div>
+			<img src="../src/assets/images/index2.png" alt=""/>
+		</div>
+		<div>
+			<p class="highlight" data-surface="highlight-primary">WE'LL WORK WITH YOU</p>
+			<h2>What To Expect</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+			<ul>
+				<li>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day.</li>
+				<li>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test override the digital.</li>
+			</ul>
+		</div>
+	</div>
+</section>
+<section class="section_3"> 
+<div class="full">
+    <header>
+      <h2>Financial Projections</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </header>
+    
+    <ul role="list">
+      <li>
+		<!-- <Icon name="sheet" /> -->
+        <h3>The Balance Sheet</h3>
+        <p>The Balance Sheet is a summary of the assets and liabilities and equity of a business at a specific point of time.</p>
+      </li>
+      
+      <li>
+		<!-- <Icon name="sheet" /> -->
+        <h3>Income Statement</h3>
+        <p>The Income (Profit and Loss) Statement, commonly referred to as the P&L statement, summarizes the revenue and expenses for a specific time period (one month, one quarter, one year, etc.)</p>
+      </li>
+      
+      <li>
+		<!-- <Icon name="sheet" /> -->
+        <h3>Financial Plan</h3>
+        <p>Keep your information current and review the documents on a regular basis (monthly or more often if needed). Review them with key individuals within your company.</p>
+      </li>
+      
+      <li>
+		<!-- <Icon name="sheet" /> -->
+        <h3>Financial Ratios</h3>
+        <p>Ratios are useful when comparing your company with the competition on financial performance and also when benchmarking the performance of your company.</p>
+      </li>
+    </ul>
+</div>
+  </section>
+
+  <section class="section_4">
+
+	<div class="experience">
+	<div>
+		<p class="highlight" data-surface="highlight-none">EXPERIENCE</p>
+		<h2>More than 25 years of experience</h2>
+		<p>3000+ our clients are insured around the World</p>
+	</div>
+	<div class="pie_charts">
+		<div> 
+		<div class="parent" style="--percent: 85%">
+			<h1>85%</h1>
+			<div class="child"></div>
+		</div>
+		<h6>Consistency</h6>
+		</div>
+		<div> 
+		<div class="parent" style="--percent: 95%">
+			<h1>95%</h1>
+			<div class="child"></div>
+			</div>
+			<h6>Improvement</h6>
+		</div>
+		<div> 
+		<div class="parent" style="--percent: 90%">
+			<h1>90%</h1>
+			<div class="child"></div>
+		</div>
+		<h6>Branching</h6>
+		</div>
+	</div>
+</div>
+</section>
+
+<CoreValues />
+
+<section class="section_6">
+	<div class="grid_1-1_3">
+		<div>
+			<img src="../src/assets/images/index3.jpg" alt=""/>
+			<img src="../src/assets/images/index4.jpg" alt=""/>
+			<img src="../src/assets/images/index5.jpg" alt=""/>
+		</div>
+		<div class="infomationer">
+			<p class="highlight" data-surface="highlight-primary">Proccess</p>
+			<h2>Contact Us. It’s Easy.</h2>
+			<p>Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative.</p>
+			<div class="info">
+				<div>icon</div>
+				<div>
+					<p>Call Today</p>
+					<h6>+1 800 100 900</h6>
+				</div>
+			</div>
+			<div class="info">
+				<div>icon</div>
+				<div>
+					<p>Monday To Friday</p>
+					<h6>9AM - 5PM</h6>
+				</div>
+			</div>
+			<div class="info">
+				<div>icon</div>
+				<div>
+					<p>USA Office</p>
+					<h6>195 Devonshire St Boston, MA 02110</h6>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<Newletter />
+
+<Footer />
+<!--  
 <EmployeeSection data{employeeData} />
 <EmployeeSection data{employeeData} />
+-->
 
 </BaseLayout>
 
 <style>
 
+/* HERO */
+.hero {
+	display: grid;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 0.6fr 1.33fr 1.33fr 1.33fr 0.6fr;
+
+	@media (width < 900px) {
+        grid-template-rows: 1fr 1fr 1fr;
+        }
+	
+}
+
+.grid_1-1 {
+	display: grid;
+	grid-template-rows: 1fr;
+	grid-template-columns: 1fr 1fr;
+	grid-area:  1 / -1 / span 4 / 1;
+	background-color: var(--black);
+
+	 @media (width < 900px) {
+        display: block;
+		grid-area:  1 / -1 / span 2 / 1;
+        }
+
+	& > div {
+		color: #FFF;
+		max-width: 61ch;
+    padding-left: 5%;
+	padding-right: 5%;
+    margin-top: 3rem;
+	justify-self: end;
+	}
+
+	& p {
+		padding-top: 5%;
+		color: white;
+	}
+
+	& button {
+		margin-top: 5%;
+		padding: 3% 7%;
+		border-radius: 60px;
+	}
+
+
+	& img {
+		align-self: stretch;
+        object-fit: cover;
+	}	
+}
+
+.grid_1-1 img {
+	@media (width < 900px) {
+        display: none;
+        }
+}
+
+
+
+.cards {
+	display: grid;
+	grid-template-columns: subgrid;
+	grid-area: 4 / 2 / span 2 / 5;
+	gap: 10px;
+
+	@media (width < 900px) {
+       display: block;
+	   grid-area: 2 / 2 / span 2 / 5;
+        }
+
+	& h6 {
+		color: var(--white);
+		line-height: 116%;
+	}
+	
+	& p  {
+		color: var(--white);
+
+	}
+
+	& > div {
+		display: grid;
+		border-radius: 20px;
+		border: 1px solid rgba(255, 255, 255, 0.20);
+		background: rgba(38, 38, 38, 0.90);
+		backdrop-filter: blur(16px);
+		padding: 10%;
+	}
+
+	& > div + div {
+
+		@media (width < 900px) {
+			margin-top: 5%;
+        }
+		
+
+	
+	}
+	
+	
+	button {
+		padding: 16px 31px;
+		border-radius: 55px;
+		grid-row: 3; 
+		font-family: Lato;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 160%;
+		width: auto;
+		justify-self: start; 
+		margin-top: 10%;
+	}
+}
+
+/* anden sektion */
+
+.section_2 {
+	max-width: 108ch;
+	margin-inline: 1rem;
+	padding: .5rem;
+	margin-top: 3rem;
+  
+  @media (width > 600px) {
+  	padding: 3rem;
+  	margin-inline: auto;
+  }
+}
+
+.grid_1-1_2 {
+
+	@media (width > 800px) {
+  	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5%;
+  }
+}
+
+	.grid_1-1_2 img {
+	border-radius: 30px;
+	align-self: stretch;
+    object-fit: cover;
+
+	@media (width < 800px) {
+  	padding-bottom: 5%;
+  }
+
+	}
+
+
+
+.grid_1-1_2 > div:first-child {
+	
+	position: relative;
+
+	&:before {
+    --square-count: 11;
+    --square-size: 1.34rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -2;
+    content: '';
+    position: absolute;
+    inset: -10% 60% auto auto;
+    /*inline-size: calc(var(--square-count) * 1.34rem - .67rem);*/
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    background: var(--green);
+    width: 150px;
+    height: 125px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
+:root {
+  --checkmark-icon: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="%234EAF4E" d="M176.49 95.51a12 12 0 0 1 0 17l-56 56a12 12 0 0 1-17 0l-24-24a12 12 0 1 1 17-17L112 143l47.51-47.52a12 12 0 0 1 16.98.03M236 128A108 108 0 1 1 128 20a108.12 108.12 0 0 1 108 108m-24 0a84 84 0 1 0-84 84a84.09 84.09 0 0 0 84-84"/></svg>');
+  --square-pattern: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="red"><path d="M7.47662 4.02206C6.50635 3.05178 5.53232 2.07774 4.56205 1.10745C4.28482 0.83023 3.80905 0.83023 3.53183 1.10745C2.56155 2.07774 1.59128 3.04803 0.621002 4.02206C0.343781 4.29929 0.343781 4.77506 0.621002 5.05229C1.59128 6.02258 2.5653 6.99661 3.53558 7.9669C3.8128 8.24412 4.28857 8.24412 4.56579 7.9669C5.53607 6.99661 6.51009 6.02258 7.48037 5.05229C7.63022 4.90244 7.69016 4.73011 7.69016 4.56527C7.69016 4.55403 7.69016 4.54654 7.69016 4.5353C7.69016 4.52781 7.69016 4.51657 7.69016 4.50908C7.69016 4.34424 7.63022 4.17191 7.47662 4.02206ZM4.04881 6.41968C3.41944 5.79031 2.79382 5.16468 2.16445 4.5353C2.79382 3.90593 3.41944 3.2803 4.04881 2.65092C4.67818 3.2803 5.3038 3.90593 5.93317 4.5353C5.3038 5.16468 4.67818 5.79031 4.04881 6.41968Z"/></svg>');
+}
+
+
+.section_2 ul {
+  display: grid;
+  gap: 1rem;
+  padding: 0px;
+}
+
+.section_2 li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #595566;
+}
+
+.section_2 li:before {
+  content: '';
+  width: 1.6rem;
+  aspect-ratio: 1;
+  background: var(--checkmark-icon) 50% 50% / contain no-repeat;
+}
+
+/* trejde sektion */
+
+:root {
+  --content-width: 62rem;
+}
+
+.section_3 {
+	background-color: var(--grey);
+  padding-block: 4rem;
+  display: grid;
+  grid-template-columns:
+    [full-start]
+    1fr
+    [content]
+    minmax(0, var(--content-width))
+    1fr
+    [full-end];
+  column-gap: 1rem;
+  
+  > * {
+    grid-column: content;
+  }
+  
+  .full {
+    grid-column: full;
+    display: grid;
+    grid-template-columns: inherit;
+    row-gap: 3rem;
+    
+    > * {
+      grid-column: content;
+    }
+    
+    > ul {
+      scroll-snap-type: x mandatory;
+      grid-column: full;
+      padding-inline: max(1rem, 50% - var(--content-width) / 2);
+      padding-block-end: 1rem;
+      
+      li {
+        scroll-snap-align: center;
+      }
+    }
+  }
+}
+
+.section_3 ul {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  
+  li {
+    flex-basis: min(400px, 90%);
+    flex-shrink: 0;
+    background: #EBEBEB;
+    border-radius: 8px;
+    font-size: 1rem;
+    padding: 2.75rem 2.1875rem;
+    align-self: start;
+    
+    h3 {
+      font-weight: 700;
+      font-size: 1.5625rem;
+    }
+  }
+}
+
+.section_3 li:hover {
+	background-color: var(--black);
+	cursor: pointer;
+
+	h3, p {
+		color: white;
+	}
+}
+
+/* pie carts section */
+
+.section_4 {
+background-color: var(--yellow);
+padding-top: 3rem;
+}
+
+.experience {
+	background: var(--yellow);
+	max-width: 108ch;
+	margin-inline: 1rem;
+	padding: .5rem;
+	gap: 5%;
+	
+  
+  @media (width > 800px) {
+  	padding: 3rem;
+  	margin-inline: auto;
+	display: flex;
+	align-items: center;
+  }
+
+}
+
+
+@property --percent {
+  syntax: "<percentage>";
+  inherits: true;
+  initial-value: 0;
+}
+
+.parent {
+  --offset-pos: 5px;
+  /*animation: --pie 3s linear infinite;*/
+  border: var(--offset-pos) solid transparent;
+  background:
+    radial-gradient(circle at 50% calc(var(--offset-pos)/2), var(--white) calc(var(--offset-pos)/2), transparent 0) border-box,
+    linear-gradient(var(--yellow), var(--yellow)) padding-box,
+    conic-gradient(var(--white) var(--percent), grey 0) border-box;
+  position: relative;
+  
+  
+  .child {
+    aspect-ratio: 1;
+    border-radius: 99px;
+    width: 20px;
+    background: red;
+    position: absolute;
+    offset-path: border-box;
+    offset-distance: var(--percent);
+    offset-anchor: 50% calc(50% - var(--offset-pos) / 2);
+  }
+}
+
+.parent {
+  aspect-ratio: 1;
+  width: 150px;
+  border-radius: 1e5px;
+  margin-inline: auto;
+  font-family: var(--text);
+  font-size: clamp(2.5rem, 2.2826rem + 1.087vw, 3.125rem);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 116%;
+  position: relative;
+
+  h1 {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+}
+
+.pie_charts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+	justify-content: center;
+	width: 100%;
+
+	 @media (width < 800px) {
+  	padding-top: 5%;
+  	
+  }
+	
+}
+
+.pie_charts div h6 {
+	display: flex;
+	justify-content: center;
+	padding-top: 10%;
+}
+
 [data-icon=""] {
 
 }
+
+.section_6 {
+max-width: 108ch;
+	margin-inline: 1rem;
+	padding: .5rem;
+	margin-top: 3rem;
+  
+  @media (width > 600px) {
+  	padding: 3rem;
+  	margin-inline: auto;
+  }
+}
+
+.infomationer {
+
+	@media (width < 900px) {
+	margin-top: 10%;
+	}
+}
+
+.info {
+	display: flex;
+	align-items: center;
+	gap: 5%;
+	padding-top: 5%
+}
+
+.grid_1-1_3 {
+
+
+	@media (width > 900px) {
+  	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 5%;
+  }
+
+	& div:has(img) {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 5%;
+		order: 2;
+	}
+
+	& div img:first-child {
+		grid-column: 1;
+		grid-row: 1 / span 2;
+	}
+	
+	& div img:nth-child(2) {
+		grid-column: 2;
+	}
+	
+	& div img:nth-child(3) {
+		grid-column: 2;
+		grid-row: 2;
+	}
+}
+
+.grid_1-1_3 img {
+	border-radius: 30px;
+	align-self: stretch;
+	object-fit: cover;
+}
+
+.grid_1-1_3 div:has(img) {
+
+	position: relative;
+
+	&:before {
+    --square-count: 11;
+    --square-size: 1.34rem;
+    
+    --_square-size: var(--square-size, 1rem);
+    --_square-half: calc(var(--square-size) / 2);
+    --_square-sum: calc(var(--square-count) * var(--square-size));
+    z-index: -2;
+    content: '';
+    position: absolute;
+    inset: -7% -10% auto auto;
+    /*inline-size: calc(var(--square-count) * 1.34rem - .67rem);*/
+    inline-size: calc( round( var(--_square-sum), var(--_square-size) ) - var(--_square-half) );
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, #BE965D, #976F40, #C99B61, #F0BE7B , #FFCB85, #EEBC79, #C0935B, #976F40) 0 0 / 100% 100%;
+    mask:
+      var(--square-pattern) 0 0 / var(--_square-size) var(--_square-size),
+      var(--square-pattern) var(--_square-half) var(--_square-half) / var(--_square-size) var(--_square-size);
+    /*clip-path: polygon(-3% 0%, 100% 0%, 100% 103%);*/
+  }
+ 
+  &::after {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    bottom: -2rem;
+    background: var(--green);
+    width: 225px;
+    height: 125px;
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
+
+
 
 </style>

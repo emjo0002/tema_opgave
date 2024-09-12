@@ -1,0 +1,132 @@
+---
+---
+<section>
+    <div class="full">
+         <div class="header">
+            <div class="header2">
+                <p class="highlight" data-surface="highlight-primary">Growing with our Clients</p>
+                <h2>Our core values & principles</h2>
+            </div>
+            <p>Capitalize on low hanging fruit to identify a ballpark value added activity beta test. Override the digital divide with additional from DevOps.</p>
+            <button data-surface="primary">Get in touch</button>
+        </div>
+        <div class="grid">
+            <div class="card">
+                <div>icon</div>
+                <h6>Creative Ideas</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card">
+                <div>icon</div>
+                <h6>Best Features</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card">
+                <div>icon</div>
+                <h6>Experience</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eget accumsan augue Donec aliquam.</p>
+                <a href="#">Read More</a>
+            </div>
+            <div class="card">
+                <div>icon</div>
+                <h6>Easy Solutions</h6>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <a href="#">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <style>
+        @layer components {
+        section {
+            padding-top: 5%;
+            background-color: var(--black);
+            padding-bottom: 5%;
+        }
+
+        .header2 {
+                grid-template-columns: subgrid;
+                grid-column: 1 / span 2;
+                
+                @media (width < 800px) {
+                    padding-bottom: 3%;
+                }
+
+            
+        }
+
+        h6 {
+            padding-top: 5%;
+        }
+
+         .full {
+                max-width: 108ch;
+                margin-inline: 1rem;
+                padding: .5rem;
+
+                @media (width > 600px) {
+  	            padding: 3rem;
+  	            margin-inline: auto;
+                }
+            }
+
+        .header {
+            display:grid;
+            grid-template-columns: 1.25fr 1fr;
+
+            p:not(.highlight), h2 {
+                color: var(--white)
+            }
+        }
+
+         button {
+            padding: 15px 34px;
+            border-radius: 55px;
+            width: fit-content;
+            height: fit-content;
+            justify-self: end;
+            align-self: end;
+            }
+
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            grid-auto-rows: auto; 
+            gap: 1%;
+            padding-top: 5%
+        }
+
+        .card {
+            border-radius: 8px;
+            padding: 7% 5%;
+            background-color: var(--white);
+            align-self: start;
+
+            & h6 {
+                 margin: 0 0 10px;
+                }
+                & p {
+                    margin: 0 0 10px;
+                }
+                
+                & a {
+                    text-decoration: none;
+                    color: var(--black); 
+                }
+
+        }
+
+        @media (max-width: 920px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+   
+}
+    }
+
+    </style>

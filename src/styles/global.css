@@ -4,8 +4,126 @@
 
 @layer global {
 
+    /* lav globale styles og variabler her */
 
     html {
-        
+        /* Roots for farver */
+        --yellow: #FFCC4A;
+        --green: #4EAF43;
+        --black: #181818;
+        --grey: #F5F5F5;
+        --white: #FFFFFF;
+
+        /* Roots for fonte */
+        --text: "Cabin", sans-serif;
+        --paragraph: "Lato", sans-serif;
     }
+
+     h1 {
+        font-family: var(--text);
+        font-size: clamp(2.5rem, 2.2826rem + 1.087vw, 3.125rem); /* 50px - 40px */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    h2 {
+       font-family: var(--text);
+       font-size: clamp(2.1875rem, 1.9701rem + 1.087vw, 2.8125rem); /* 45px - 35px */
+       font-style: normal;
+       font-weight: 600;
+       line-height: 130%; 
+    }
+
+    h3 {
+        font-family: var(--text);
+        font-size: clamp(1.875rem, 1.6576rem + 1.087vw, 2.5rem); /* 40px - 30px */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    h4 {
+        font-family: var(--text);
+        font-size: clamp(1.5625rem, 1.3451rem + 1.087vw, 2.1875rem); /* 35px - 25px */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    h5 {
+       font-family: var(--text); 
+       font-size: clamp(1.25rem, 1.0326rem + 1.087vw, 1.875rem); /* 30px - 20px */
+       font-style: normal;
+       font-weight: 600;
+       line-height: 130%; 
+    }
+
+    h6 {
+        font-family: var(--text); 
+        font-size: clamp(0.9375rem, 0.7201rem + 1.087vw, 1.5625rem); /* 25px - 15px */
+        font-style: normal;
+        font-weight: 600;
+        line-height: 130%;
+    }
+
+    p {
+       font-family: var(--paragraph);
+       color: #595566;
+       font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem); /* 16px - 14px */
+       font-style: normal;
+       font-weight: 400;
+       line-height: 147.5%; 
+    }
+
+    [data-surface="primary"] {
+  --bg-button: var(--white);
+  --text: var(--black);
 }
+
+[data-surface="secondary"] {
+  --bg-button: #151515;
+  --text: var(--white);
+}
+    
+[data-surface="tertiary"] {
+  --bg-button: var(--gray);
+  --text: var(--black);
+}
+
+ button {
+        background: var(--bg-button, var(--yellow));
+        color: var(--text, var(--black));
+        font-family: Lato;
+        font-size: clamp(0.875rem, 0.8315rem + 0.2174vw, 1rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        display: flex;
+        padding: 4px 16px;
+       justify-content: center;
+       align-items: center;
+       border-radius: 20px;
+  }
+
+[data-surface="highlight-none"] {
+  --bg: var(--white);
+  --text: var(--black);
+}
+
+[data-surface="highlight-primary"] {
+  --bg: var(--yellow);
+  --text: var(--black);
+}
+
+.highlight {
+	background: var(--bg, var(--white));
+    color: var(--text, var(--black));
+	padding: 0px 12px;
+	border-radius: 55px;
+	width: fit-content;
+}
+    /* highligts */
+}
+
+   
